@@ -69,12 +69,19 @@ body {
   background-color: var(--primary-light-color);
 }
 
+input,
+textarea,
+button {
+  font-family: inherit;
+  line-height: inherit;
+}
+
 button {
   font-style: normal;
-  font-family: var(--primary-font);
+  /* font-family: var(--primary-font); */
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5; /* 150% */
+  /* line-height: 1.5; /* 150% */ */
   letter-spacing: var(--button-letter-spacing);
   cursor: pointer;
   border-radius: 4px;
@@ -669,6 +676,59 @@ button:focus {
 .footer-social-link:focus,
 .footer-social-link:active {
   background-color: var(--success-message-color);
+}
+
+/* footer form */
+
+.footer-form-block {
+  display: flex;
+  margin-left: 80px;
+}
+
+.footer-form-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-form-input {
+  width: 264px;
+  height: 40px;
+  margin-top: 16px;
+  margin-right: 24px;
+  padding: 8px 16px;  
+  background-color: var(--secondary-dark-color);
+  border: 1px solid var(--primary-light-color);
+  border-radius: 4px;
+  box-shadow: var(--box-shadow-button);
+}
+
+.footer-form-input::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+  color: var(--primary-light-color);
+}
+
+.footer-form-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-self: end;
+  gap: 16px;
+  padding: 8px 24px;
+  /* border-radius: 4px; */
+  border-color: transparent;
+  font-weight: 500;
+  /* font-style: normal; */
+  line-height: 1.5;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--primary-light-color);
+  background: var(--primary-accent-color);
+}
+
+.footer-btn-icon {
+  fill: var(--primary-light-color);
 }
 
 /* ====== /FOOTER ====== */
