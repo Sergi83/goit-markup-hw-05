@@ -748,9 +748,9 @@ button:focus {
 }
 
 .is-hidden {
-  /* opacity: 0;
+  opacity: 0;
   visibility: hidden;
-  pointer-events: none; */
+  pointer-events: none;
 }
 
 /* ====== /BACKDOP ====== */
@@ -893,6 +893,8 @@ button:focus {
   width: 16px;
   height: 16px;
   color: var(--backdrop-bg-color, rgba(46, 47, 66, 0.4));
+  transition: opacity var(--transition-timing),
+    visibility var(--transition-timing);
 }
 
 .checkbox-icon-checked {
@@ -947,6 +949,11 @@ button:focus {
   /* stroke: var(--primary-light-color); */
 }
 
+.modal-form-btn:active,
+.modal-form-btn:focus {
+  outline: none;
+}
+
 .modal-form-input:hover,
 .modal-form-textarea:hover {
   border-color: var(--primary-accent-color);
@@ -970,10 +977,11 @@ button:focus {
 .modal-checkbox:hover {
   outline: none;
   border-color: var(--secondary-accent-color);
+  cursor: pointer;
 }
 
 .modal-checkbox:active {
-  /* outline: none; */
+  opacity: none;
   visibility: hidden;
 }
 
