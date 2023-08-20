@@ -818,6 +818,7 @@ button:focus {
 }
 
 .modal-label {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -840,8 +841,23 @@ button:focus {
 .modal-form-input {
   width: 360px;
   height: 40px;
+  padding: 8px 16px 8px 32px;
   border-radius: 4px;
   border: 1px solid var(--backdrop-bg-color, rgba(46, 47, 66, 0.4));
+  transition: border-color var(--transition-timing);
+}
+
+.modal-form-input:focus-within {
+  border-color: #000;
+  :transparent ;
+}
+
+.form-input-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 16px;
+  fill: var(--secondary-dark-color);
+  transition: fill var(--transition-timing);
 }
 
 .modal-form-textarea {
@@ -883,6 +899,10 @@ button:focus {
   position: absolute;
   top: 0;
   left: 0;
+  visibility: hidden;
+  fill: var(--secondary-accent-color);
+  transition: opasity var(--transition-timing),
+    visibility var(--transition-timing);
 }
 
 .checkbox-text {
@@ -925,6 +945,41 @@ button:focus {
 .modal-close-btn:focus .close-btn-icon {
   fill: var(--primary-light-color);
   /* stroke: var(--primary-light-color); */
+}
+
+.modal-form-input:hover,
+.modal-form-textarea:hover {
+  border-color: var(--primary-accent-color);
+}
+
+.modal-form-input:focus,
+.modal-form-textarea:focus,
+.modal-form-input:active,
+.modal-form-textarea:active {
+  outline: none;
+  border-color: var(--primary-accent-color);
+}
+
+.modal-form-input:hover + .form-input-icon,
+.modal-form-input:focus + .form-input-icon,
+.modal-form-input:active + .form-input-icon {
+  fill: var(--primary-accent-color);
+}
+
+.modal-checkbox:focus,
+.modal-checkbox:hover {
+  outline: none;
+  border-color: var(--secondary-accent-color);
+}
+
+.modal-checkbox:active {
+  /* outline: none; */
+  visibility: hidden;
+}
+
+.modal-checkbox:checked + .checkbox-icon-checked {
+  visibility: visible;
+  fill: var(--secondary-accent-color);
 }
 
 @keyframes changeModalOpasity {
