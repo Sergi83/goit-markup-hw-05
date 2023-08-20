@@ -682,7 +682,7 @@ button:focus {
 
 .footer-form-block {
   display: flex;
-  gap: 24px;
+  /* gap: 24px; */
   margin-left: 80px;
 }
 
@@ -715,6 +715,7 @@ button:focus {
   align-items: center;
   align-self: end;
   gap: 16px;
+  margin-left: 24px;
   padding: 8px 24px;
   /* border-radius: 4px; */
   border-color: transparent;
@@ -791,6 +792,12 @@ button:focus {
   stroke: var(--secondary-dark-color); */
   transition: fill var(--transition-timing);
 }
+
+/* modal inputs */
+
+
+
+/* modal hover, focus */
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
