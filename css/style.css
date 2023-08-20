@@ -898,6 +898,7 @@ button:focus {
   line-height: 1.17;
   letter-spacing: var(--button-letter-spacing);
   color: var(--backdrop-bg-color);
+  background-color: transparent;
   border: 1px solid var(--backdrop-bg-color, rgba(46, 47, 66, 0.4));
   border-radius: 4px;
   padding: 8px 16px;
@@ -942,6 +943,7 @@ button:focus {
   justify-content: center;
   border: 1px solid var(--backdrop-bg-color);
   border-radius: 2px;
+  fill: transparent;
   transition: background-color var(--transition-timing),
     border var(--transition-timing), fill var(--transition-timing);
 }
@@ -1033,6 +1035,7 @@ button:focus {
 .modal-checkbox-hidden:checked + .modal-checkbox-label > .checkbox-container {
   background-color: var(--secondary-accent-color);
   border: none;
+  fill: var(--secondary-light-color);
   border-color: var(--secondary-accent-color);
 }
 
