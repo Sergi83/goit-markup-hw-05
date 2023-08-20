@@ -616,23 +616,25 @@
             </li>
           </ul>
         </div>
-        <form action="" class="footer-form-block">
-          <label for="email_form" class="footer-form-label"
-            >Subscribe<input
-              type="email"
-              name="email_form"
-              class="footer-form-input"
-              placeholder="E-mail"
-              id=""
-            />
-          </label>
-          <button type="submit" class="footer-form-btn">
-            subscribe
-            <svg class="footer-btn-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </button>
-        </form>
+        <div class="footer-form-block">
+          <p class="footer-form-paragraph">Subscribe</p>
+          <form class="footer-form">
+            <label class="footer-form-label"
+              ><input
+                class="footer-form-input"
+                type="email"
+                name="email_form"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="footer-form-btn">
+              subscribe
+              <svg class="footer-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- /FOOTER -->
@@ -649,12 +651,7 @@
             <use href="./images/icons.svg#icon-close-circle"></use>
           </svg>
         </button>
-        <form
-          class="modal-form"
-          type="submit"
-          name="modal-window-form"
-          autocomplete="off"
-        >
+        <form class="modal-form" name="modal-window-form" autocomplete="off">
           <p class="modal-form-message">
             Leave your contacts and we will call you back
           </p>
@@ -681,7 +678,6 @@
                 class="modal-form-input"
                 type="tel"
                 name="input_phone"
-                autofocus
                 pattern="[0-9]{3}-[0-9]{3}[0-9]{4}"
               /><svg
                 class="form-input-icon"
@@ -698,7 +694,6 @@
                 class="modal-form-input"
                 type="email"
                 name="input_email"
-                autofocus
               /><svg
                 class="form-input-icon"
                 width="16"
@@ -714,7 +709,6 @@
                 class="modal-form-textarea"
                 name="textarea_comment"
                 placeholder="Text input"
-                id=""
               ></textarea>
             </label>
           </div>
@@ -735,7 +729,7 @@
               </svg>
             </span>
             <span class="checkbox-text"
-              >I accept the terms and conditions of the&nbsp<a
+              >I accept the terms and conditions of the&nbsp;<a
                 href=""
                 class="link checkbox-link"
                 >Privacy Policy</a
